@@ -1,0 +1,59 @@
+{
+  "name": "fredbradley/laravel-version-health-check",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fred Bradley",
+      "email": "code@fredbradley.co.uk",
+      "role": "Developer"
+    }
+  ],
+  "keywords": [
+    "laravel",
+    "health",
+    "health-check",
+    "spatie health",
+    "spatie",
+    "health check"
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "homepage": "https://github.com/fredbradley/laravel-version-health-check",
+  "description": "A Spatie Laravel Health Check, that checks your Laravel Application version against the latest version release",
+  "require": {
+    "php": "^8.3",
+    "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+    "spatie/laravel-health": "^1.37"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0|^9.0|^10.0",
+    "pestphp/pest": "^2.0|^3.0",
+    "pestphp/pest-plugin-laravel": "^2.0|^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "FredBradley\\LaravelVersionHealthCheck\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "FredBradley\\LaravelVersionHealthCheck\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "./vendor/bin/pest"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "FredBradley\\LaravelVersionHealthCheck\\ServiceProvider"
+      ]
+    }
+  }
+}
