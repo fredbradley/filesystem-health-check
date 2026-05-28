@@ -1,5 +1,5 @@
 {
-  "name": "fredbradley/laravel-version-health-check",
+  "name": "fredbradley/filesystem-health-check",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -19,10 +19,10 @@
   ],
   "minimum-stability": "dev",
   "prefer-stable": true,
-  "homepage": "https://github.com/fredbradley/laravel-version-health-check",
-  "description": "A Spatie Laravel Health Check, that checks your Laravel Application version against the latest version release",
+  "homepage": "https://github.com/fredbradley/filesystem-health-check",
+  "description": "A Spatie Laravel Health Check, that checks your Laravel filesystems are connectable",
   "require": {
-    "php": "^8.3",
+    "php": "^8.5",
     "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
     "spatie/laravel-health": "^1.37"
   },
@@ -33,12 +33,12 @@
   },
   "autoload": {
     "psr-4": {
-      "FredBradley\\LaravelVersionHealthCheck\\": "src/"
+      "FredBradley\\FilesystemHealthCheck\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "FredBradley\\LaravelVersionHealthCheck\\Tests\\": "tests/"
+      "FredBradley\\FilesystemHealthCheck\\Tests\\": "tests/"
     }
   },
   "scripts": {
@@ -52,7 +52,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "FredBradley\\LaravelVersionHealthCheck\\ServiceProvider"
+        "FredBradley\\FilesystemHealthCheck\\ServiceProvider"
       ]
     }
   }
