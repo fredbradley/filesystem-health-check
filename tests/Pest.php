@@ -1,3 +1,5 @@
 <?php
 
-uses(FredBradley\LaravelVersionHealthCheck\Tests\TestCase::class)->in('.');
+use FredBradley\FilesystemHealthCheck\Tests\TestCase;
+
+uses(TestCase::class)->in('.');

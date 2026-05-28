@@ -2,13 +2,14 @@
 
 namespace FredBradley\FilesystemHealthCheck;
 
+use Illuminate\Support\Facades\Storage;
 use Spatie\Health\Checks\Check;
 use Spatie\Health\Checks\Result;
-use Illuminate\Support\Facades\Storage;
 
 class DiskConnectionCheck extends Check
 {
     protected string $diskName = 'default';
+
     protected bool $expectsWritable = true;
 
     public function disk(string $diskName): static
@@ -37,7 +38,7 @@ class DiskConnectionCheck extends Check
 
                 $disk->put($path, 'health-check-'.now()->toIso8601String());
 
-                if (!$disk->exists($path)) {
+                if (! $disk->exists($path)) {
                     return $result->failed("Write succeeded but file not found on disk [{$this->diskName}]");
                 }
 
