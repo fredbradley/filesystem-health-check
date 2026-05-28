@@ -9,7 +9,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot(): void
     {
         Health::checks([
-            LaravelVersionHealthCheck::new()->name('Laravel Version')
+            HealthCheck::new()->name('Laravel Version')
         ]);
     }
 }
