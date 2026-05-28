@@ -1,6 +1,6 @@
 <?php
 
-namespace FredBradley\LaravelVersionHealthCheck;
+namespace FredBradley\FilesystemHealthCheck;
 
 use Spatie\Health\Facades\Health;
 
